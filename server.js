@@ -23,6 +23,16 @@ app.get('/einstein', function (req, res) {
   });
 });
 
+app.get('/schrodinger', function (req, res) {
+  res.render('quote.hbs', {
+    quote: chance.pick(['If a man never contradicts himself, the reason must be that he virtually never says anything at all.',
+                        'The task is...not so much to see what no one has yet seen; but to think what nobody has yet thought, about that which everybody sees.']),
+    author: 'Erwin Schrödinger'
+  });
+});
+
+
+
 app.get('/random', function (req, res) {
   res.render('quote.hbs', {
     quote: chance.paragraph(),
